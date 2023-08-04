@@ -42,4 +42,8 @@ public class Car implements Entity<Car> {
     public boolean hasSameIdentityAs(Car that) {
         return this.id.equals(that.id);
     }
+
+    public void updatePrice(Money newPrice) {
+        price = newPrice;
+    }
 }

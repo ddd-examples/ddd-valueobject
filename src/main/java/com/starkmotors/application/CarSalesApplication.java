@@ -18,5 +18,9 @@ public class CarSalesApplication {
                 "Red",
                 new Money(5_00_000.00, Currency.getInstance("INR")));
         //persist the car
+
+        marutiSwift.updatePrice(new Money(5_00_000.00, Currency.getInstance("INR")));
+
+        //save the update
     }
 }
