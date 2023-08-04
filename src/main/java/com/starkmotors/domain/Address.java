@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class Address {
-    private String houseNo;
-    private String floor;
     private String area;
     private String city;
     private String pincode;
+
+    public Address(String area, String city, String pincode) {
+        this.area = area;
+        this.city = city;
+        this.pincode = pincode;
+    }
 }

@@ -14,4 +14,8 @@ public class CustomerID {
     public CustomerID(UUID uuid) {
         this.uuid = uuid;
     }
+
+    public static CustomerID newId() {
+        return new CustomerID(UUID.randomUUID());
+    }
 }

@@ -8,26 +8,19 @@ import java.util.UUID;
 
 public class CarSalesApplication {
     public static void main(String[] args) {
-        Address address = Address.builder()
-                .houseNo("1001 Orchid Palace")
-                .floor("1")
-                .area("Wanowrie")
-                .city("Pune")
-                .pincode("411006")
-                .build();
-        Customer parikshit = new Customer(new CustomerID(UUID.randomUUID()),
+        Address address = new Address("Wanowrie"
+                ,"Pune"
+                ,"411006");
+        Customer parikshit = new Customer(
                 "Parikshit",
                 "Navgire",
                 "parikshit@gmail.com",
                 address);
         //save the customer
-        Address newAddress = Address.builder()
-                .houseNo("5001 Jay Paradise")
-                .floor("5")
-                .area("Kondwa")
-                .city("Pune")
-                .pincode("411007")
-                .build();
+        Address newAddress = new Address("Kondva"
+                ,"Pune"
+                ,"411007");
         parikshit.shiftedTo(newAddress);
+        //save customer
     }
 }
